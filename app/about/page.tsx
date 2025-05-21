@@ -1,7 +1,5 @@
 // app/about/page.tsx
 import Footer from '@/components/Footer';
-import Link from 'next/link';
-import Image from 'next/image';
 import HomeWhyUs from '@/components/Homeabt';
 import TeamSection from '@/components/team';
 import HomeNavbar from '@/components/Homenav';

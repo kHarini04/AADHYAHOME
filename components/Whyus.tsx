@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 const cards = [
   {
@@ -92,16 +93,17 @@ export default function WhyUs() {
                     key={idx}
                     className="w-full md:w-1/2 h-[500px] relative rounded-xl overflow-hidden shadow-lg"
                   >
-                    <img
+                   <Image
                       src={card.image}
                       alt={card.title}
-                      className="w-full h-full object-cover"
-                    />
+                      layout="fill"
+                       objectFit="cover"
+                      />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent text-white p-6 flex flex-col justify-end">
                       <h3 className="text-xl font-bold">{card.title}</h3>
                       <p className="text-sm mt-1">{card.description}</p>
                       <button className="flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-400 text-white mt-4 mx-auto px-6 py-3 rounded-xl transition">
-                        <img src="/near_me.svg" alt="Book Icon" className="w-5 h-5" />
+                        <Image src="/near_me.svg" alt="Book Icon" width={20} height={20} />
                         <span className="font-medium text-sm">{card.button}</span>
                       </button>
                     </div>
